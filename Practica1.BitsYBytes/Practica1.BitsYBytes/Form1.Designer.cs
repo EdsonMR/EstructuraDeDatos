@@ -172,7 +172,7 @@
             // prgsBarTanque
             // 
             this.prgsBarTanque.Location = new System.Drawing.Point(338, 196);
-            this.prgsBarTanque.MarqueeAnimationSpeed = 250;
+            this.prgsBarTanque.MarqueeAnimationSpeed = 50;
             this.prgsBarTanque.Name = "prgsBarTanque";
             this.prgsBarTanque.Size = new System.Drawing.Size(100, 29);
             this.prgsBarTanque.Step = 30;

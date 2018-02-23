@@ -121,13 +121,13 @@ namespace Practica1.BitsYBytes
 
         private void btnAjustarFecha_Click(object sender, EventArgs e)
         {
-            Int32 fecha = 0;
+            UInt16 fecha = 0;
 
-            fecha = Convert.ToInt32(DateCalendar.Value.Year - 1900);
+            fecha = Convert.ToUInt16(DateCalendar.Value.Year - 1900);
             fecha <<= 4;
-            fecha += Convert.ToInt32(DateCalendar.Value.Month);
+            fecha += Convert.ToUInt16(DateCalendar.Value.Month);
             fecha <<= 5;
-            fecha += Convert.ToInt16(DateCalendar.Value.Day);
+            fecha += Convert.ToUInt16(DateCalendar.Value.Day);
             txtFechaAjustada.Text = fecha.ToString();
         }
 
