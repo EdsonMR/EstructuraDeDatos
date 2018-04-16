@@ -12,7 +12,7 @@ namespace Actividad.Agenda
         private Contacto[] agenda = new Contacto[5];
         public int contador = 0;
 
-        public void agregar(Contacto conti)
+        public void agregar(Contacto conti) // hay que modificar
         {
             agenda[contador] = conti;
             contador++;
