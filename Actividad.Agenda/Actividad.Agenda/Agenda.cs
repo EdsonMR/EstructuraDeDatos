@@ -46,12 +46,5 @@ namespace Actividad.Agenda
 
             return cadena;
         }
-
-        public void insertar(int pos, Contacto con)
-        {
-            for (int x = tamaño - 1; x > (pos - 1); x--) agenda[x] = agenda[x - 1];
-            agenda[pos - 1] = con;
-            contador++;
-        }
     }
 }
