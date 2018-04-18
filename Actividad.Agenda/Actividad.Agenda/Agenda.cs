@@ -30,9 +30,9 @@ namespace Actividad.Agenda
         {
             for (int x = 0; x < tamaño; x++)
                 if (agenda[x].Telefono == telefono)
-                    for (int y = x; y < tamaño - 1; y++) agenda[y] = agenda[y + 1];
+                    for (int y = x; y < contador - 1; y++) agenda[y] = agenda[y + 1];
 
-            agenda[tamaño - 1] = null;
+            agenda[contador - 1] = null;
             contador--;
         }
 
