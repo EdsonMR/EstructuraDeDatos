@@ -37,20 +37,35 @@ namespace Actividad.Agenda
             }
         }
 
-        public Contacto buscar(string telefono) // hay que modificar
+        public Contacto buscar(string telefono)
         {
-            for (int x = 0; x < tamaño; x++)
-            if (agenda[x].Telefono == telefono) return agenda[x];
-
+            bool flag = false;
+            for (int x = 0; x < tamaño || flag != true; x++)
+            {
+                if (int.Parse(telefono) >= int.Parse(agenda[x].Telefono))
+                {
+                    if (agenda[x].Telefono == telefono) return agenda[x];
+                }
+                else
+                    flag = true;
+            }
             return null;
         }
 
-        public void eliminar(string telefono) // hay que modificar
+        public void eliminar(string telefono)
         {
-            for (int x = 0; x < tamaño; x++)
-                if (agenda[x].Telefono == telefono)
-                    for (int y = x; y < contador - 1; y++) agenda[y] = agenda[y + 1];
+            bool flag = false;
 
+            for (int x = 0; x < tamaño || flag != true; x++)
+            {
+                if (int.Parse(telefono) >= int.Parse(agenda[x].Telefono))
+                {
+                    if (agenda[x].Telefono == telefono)
+                        for (int y = x; y < contador - 1; y++) agenda[y] = agenda[y + 1];
+                }
+                else
+                    flag = true;
+            }
             agenda[contador - 1] = null;
             contador--;
         }
