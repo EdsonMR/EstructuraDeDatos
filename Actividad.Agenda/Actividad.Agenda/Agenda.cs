@@ -12,13 +12,32 @@ namespace Actividad.Agenda
         private Contacto[] agenda = new Contacto[5];
         public int contador = 0;
 
-        public void agregar(Contacto conti) // hay que modificar
+        public void agregar(Contacto conti)
         {
-            agenda[contador] = conti;
-            contador++;
+            bool encontrado = false;
+
+            if (contador == 0)
+            {
+                agenda[contador] = conti;
+                contador++;
+            }
+            else
+            {
+                for (int x = contador - 1; x >= 0 || encontrado != true; x--)
+                    if (int.Parse(conti.Telefono) > int.Parse(agenda[x].Telefono))
+                    {
+                        for (int y = contador; y > x + 1; y--)
+                        {
+                            agenda[y] = agenda[y - 1];
+                        }
+                        agenda[x + 1] = conti;
+                        encontrado = true;
+                    }
+                contador++;
+            }
         }
 
-        public Contacto buscar(string telefono)
+        public Contacto buscar(string telefono) // hay que modificar
         {
             for (int x = 0; x < tamaño; x++)
             if (agenda[x].Telefono == telefono) return agenda[x];
@@ -26,7 +45,7 @@ namespace Actividad.Agenda
             return null;
         }
 
-        public void eliminar(string telefono)
+        public void eliminar(string telefono) // hay que modificar
         {
             for (int x = 0; x < tamaño; x++)
                 if (agenda[x].Telefono == telefono)
