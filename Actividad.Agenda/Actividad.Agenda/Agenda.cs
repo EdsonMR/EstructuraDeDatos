@@ -14,25 +14,59 @@ namespace Actividad.Agenda
 
         public void agregar(Contacto conti)
         {
-            agenda[contador] = conti;
-            contador++;
+            bool encontrado = false;
+
+            if (contador == 0)
+            {
+                agenda[contador] = conti;
+                contador++;
+            }
+            else
+            {
+                for (int x = contador - 1; x >= 0 || encontrado != true; x--)
+                    if (int.Parse(conti.Telefono) > int.Parse(agenda[x].Telefono))
+                    {
+                        for (int y = contador; y > x + 1; y--)
+                        {
+                            agenda[y] = agenda[y - 1];
+                        }
+                        agenda[x + 1] = conti;
+                        encontrado = true;
+                    }
+                contador++;
+            }
         }
 
         public Contacto buscar(string telefono)
         {
-            for (int x = 0; x < tamaño; x++)
-            if (agenda[x].Telefono == telefono) return agenda[x];
-
+            bool flag = false;
+            for (int x = 0; x < tamaño || flag != true; x++)
+            {
+                if (int.Parse(telefono) >= int.Parse(agenda[x].Telefono))
+                {
+                    if (agenda[x].Telefono == telefono) return agenda[x];
+                }
+                else
+                    flag = true;
+            }
             return null;
         }
 
         public void eliminar(string telefono)
         {
-            for (int x = 0; x < tamaño; x++)
-                if (agenda[x].Telefono == telefono)
-                    for (int y = x; y < tamaño - 1; y++) agenda[y] = agenda[y + 1];
+            bool flag = false;
 
-            agenda[tamaño - 1] = null;
+            for (int x = 0; x < tamaño || flag != true; x++)
+            {
+                if (int.Parse(telefono) >= int.Parse(agenda[x].Telefono))
+                {
+                    if (agenda[x].Telefono == telefono)
+                        for (int y = x; y < contador - 1; y++) agenda[y] = agenda[y + 1];
+                }
+                else
+                    flag = true;
+            }
+            agenda[contador - 1] = null;
             contador--;
         }
 
@@ -45,13 +79,6 @@ namespace Actividad.Agenda
             }
 
             return cadena;
-        }
-
-        public void insertar(int pos, Contacto con)
-        {
-            for (int x = tamaño - 1; x > (pos - 1); x--) agenda[x] = agenda[x - 1];
-            agenda[pos - 1] = con;
-            contador++;
         }
     }
 }

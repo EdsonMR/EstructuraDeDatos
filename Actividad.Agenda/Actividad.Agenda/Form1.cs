@@ -28,7 +28,6 @@ namespace Actividad.Agenda
             txtBxAPaterno.Text = "";
             txtBxAMaterno.Text = "";
             txtBxTelBuscar.Text = "";
-            txtBxPosInsertar.Text = "";
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -84,28 +83,6 @@ namespace Actividad.Agenda
         private void btnListar_Click(object sender, EventArgs e)
         {
             txtBxTabla.Text = agenda.listar();
-        }
-
-        private void btnInsertar_Click(object sender, EventArgs e)
-        {
-            Contacto cX = new Contacto();
-
-            cX.Nombre = txtBxNombre.Text;
-            cX.APaterno = txtBxAPaterno.Text;
-            cX.AMaterno = txtBxAMaterno.Text;
-            cX.Telefono = txtBxTelefono.Text;
-            cX.Edad = txtBxEdad.Text;
-            cX.Email = txtBxEmail.Text;
-
-            if (agenda.contador < agenda.tamaño)
-            {
-                agenda.insertar(int.Parse(txtBxPosInsertar.Text), cX);
-                MessageBox.Show("Contacto Agregado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-                MessageBox.Show("Limite de Contactos Alcanzado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-            clear();
         }
     }
 }

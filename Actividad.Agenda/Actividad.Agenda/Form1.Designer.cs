@@ -47,9 +47,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtBxTabla = new System.Windows.Forms.TextBox();
             this.btnListar = new System.Windows.Forms.Button();
-            this.btnInsertar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtBxPosInsertar = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtBxNombre
@@ -151,7 +148,7 @@
             // btnAgregar
             // 
             this.btnAgregar.AutoSize = true;
-            this.btnAgregar.Location = new System.Drawing.Point(449, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(449, 13);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(88, 34);
             this.btnAgregar.TabIndex = 12;
@@ -162,7 +159,7 @@
             // txtBxBuscar
             // 
             this.txtBxBuscar.AutoSize = true;
-            this.txtBxBuscar.Location = new System.Drawing.Point(449, 75);
+            this.txtBxBuscar.Location = new System.Drawing.Point(449, 86);
             this.txtBxBuscar.Name = "txtBxBuscar";
             this.txtBxBuscar.Size = new System.Drawing.Size(88, 34);
             this.txtBxBuscar.TabIndex = 13;
@@ -173,7 +170,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(328, 45);
+            this.label7.Location = new System.Drawing.Point(328, 56);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(167, 24);
             this.label7.TabIndex = 15;
@@ -181,7 +178,7 @@
             // 
             // txtBxTelBuscar
             // 
-            this.txtBxTelBuscar.Location = new System.Drawing.Point(501, 42);
+            this.txtBxTelBuscar.Location = new System.Drawing.Point(501, 53);
             this.txtBxTelBuscar.Name = "txtBxTelBuscar";
             this.txtBxTelBuscar.Size = new System.Drawing.Size(138, 29);
             this.txtBxTelBuscar.TabIndex = 14;
@@ -189,7 +186,7 @@
             // btnEliminar
             // 
             this.btnEliminar.AutoSize = true;
-            this.btnEliminar.Location = new System.Drawing.Point(449, 115);
+            this.btnEliminar.Location = new System.Drawing.Point(449, 126);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(88, 34);
             this.btnEliminar.TabIndex = 16;
@@ -199,16 +196,16 @@
             // 
             // txtBxTabla
             // 
-            this.txtBxTabla.Location = new System.Drawing.Point(19, 275);
+            this.txtBxTabla.Location = new System.Drawing.Point(19, 222);
             this.txtBxTabla.Multiline = true;
             this.txtBxTabla.Name = "txtBxTabla";
-            this.txtBxTabla.Size = new System.Drawing.Size(601, 117);
+            this.txtBxTabla.Size = new System.Drawing.Size(601, 147);
             this.txtBxTabla.TabIndex = 17;
             // 
             // btnListar
             // 
             this.btnListar.AutoSize = true;
-            this.btnListar.Location = new System.Drawing.Point(449, 155);
+            this.btnListar.Location = new System.Drawing.Point(449, 166);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(88, 34);
             this.btnListar.TabIndex = 18;
@@ -216,41 +213,11 @@
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
-            // btnInsertar
-            // 
-            this.btnInsertar.AutoSize = true;
-            this.btnInsertar.Location = new System.Drawing.Point(449, 230);
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(88, 34);
-            this.btnInsertar.TabIndex = 19;
-            this.btnInsertar.Text = "Insertar";
-            this.btnInsertar.UseVisualStyleBackColor = true;
-            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(367, 198);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 24);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Posición:";
-            // 
-            // txtBxPosInsertar
-            // 
-            this.txtBxPosInsertar.Location = new System.Drawing.Point(460, 195);
-            this.txtBxPosInsertar.Name = "txtBxPosInsertar";
-            this.txtBxPosInsertar.Size = new System.Drawing.Size(138, 29);
-            this.txtBxPosInsertar.TabIndex = 20;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 404);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtBxPosInsertar);
-            this.Controls.Add(this.btnInsertar);
+            this.ClientSize = new System.Drawing.Size(647, 385);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.txtBxTabla);
             this.Controls.Add(this.btnEliminar);
@@ -300,9 +267,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtBxTabla;
         private System.Windows.Forms.Button btnListar;
-        private System.Windows.Forms.Button btnInsertar;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtBxPosInsertar;
     }
 }
 
