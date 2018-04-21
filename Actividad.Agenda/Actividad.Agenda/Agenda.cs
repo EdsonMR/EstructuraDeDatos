@@ -55,7 +55,6 @@ namespace Actividad.Agenda
         public void eliminar(string telefono)
         {
             bool flag = false;
-
             for (int x = 0; x < tamaño || flag != true; x++)
             {
                 if (int.Parse(telefono) >= int.Parse(agenda[x].Telefono))
